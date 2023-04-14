@@ -1,18 +1,18 @@
-package com.droptutorial.game;
+package com.drop.game;
 
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.droptutorial.game.DropGame;
+import com.drop.game.Drop;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-		config.useAccelerometer = false;
 		config.useCompass = false;
-		initialize(new DropGame(), config);
+		config.useAccelerometer = false;
+		initialize(new Drop(), config);
 	}
 }
